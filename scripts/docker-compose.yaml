@@ -1,0 +1,12 @@
+services:
+  ne4j:
+    image: neo4j:5.25.1
+    container_name: neo4j
+    restart: always
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/lorne4j#2024
+    volumes:
+      - ./data:/data
